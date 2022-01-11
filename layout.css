@@ -1,0 +1,42 @@
+body{
+    background-image: url(https://media1.popsugar-assets.com/files/thumbor/JtA7H7eMZSdKSIhSvEPVmgvJRnU/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/04/08/956/n/1922507/4dadda3b58741b2d_bob_s_burgers/i/Bob-Burgers-Zoom-Background.png);
+    background-size: cover;
+}
+
+.container{ 
+    display: grid;
+    font-weight: bolder;
+    color: white;
+    height: 100%;
+    grid-template-rows: repeat(3, 40%);
+    grid-template-columns: repeat(3,32%);
+    gap: 10px;    
+}
+
+#cellTop{
+    display: grid;
+    padding-bottom: 100px;
+    justify-content: center;
+}
+
+/* img{
+    width: 100px;
+    height: 100px;
+} */
+
+
+#cellMid{
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    width: 110px;
+    height: 110px;
+}
+
+
+#cellBot{
+    /* display: grid; */
+    /* justify-content: center; */
+    padding-top: 70px;
+    text-align: center;
+}
