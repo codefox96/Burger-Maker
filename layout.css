@@ -34,9 +34,13 @@ body{
 }
 
 
-#cellBot{
+.cellBot{
     /* display: grid; */
     /* justify-content: center; */
     padding-top: 70px;
     text-align: center;
+}
+
+.cellBot p{
+    font-size: xx-large;
 }
