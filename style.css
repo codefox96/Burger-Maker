@@ -1,0 +1,13 @@
+.devinfo:hover,.rules:hover,.inspiration:hover{
+    color: black;
+}
+
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+img:active{
+    opacity: 0;
+   
+}
