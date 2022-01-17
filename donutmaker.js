@@ -104,15 +104,23 @@ class DonutMaker{
 
     powerups() {
         if(this._donutCount < this._donutMultipPrice){
-            document.getElementById("cellMid5").style.opacity = "0.3";
+            document.getElementById("mPic5").style.opacity = "0.3";
         }else{
-            document.getElementById("cellMid5").style.opacity = "1";
+            document.getElementById("mPic5").style.opacity = "1";
         }
         if(this._donutCount < this._donutAutoPrice){
-            document.getElementById("cellMid6").style.opacity = "0.3";
+            document.getElementById("mPic6").style.opacity = "0.3";
         }else{
-            document.getElementById("cellMid6").style.opacity = "1";
+            document.getElementById("mPic6").style.opacity = "1";
         }
+
+        let x = document.querySelector(".price5");
+        let y = document.querySelector(".price6");
+        // const pic = new Image();
+        // pic.src = "burger.png";
+
+        x.innerText = `${Math.round(this._donutMultipPrice)}`;
+        y.innerText = `${Math.round(this._donutAutoPrice)}`;
     }
 
     

@@ -16,6 +16,10 @@ function wirebuttons() {
     dMultipButton.addEventListener('click',()=>{
         dm.clickMultip();
         console.log("Multip Click");
+
+        // const ranNum = document.createElement("p");
+        // ranNum.innerText="90000000000000001";
+        // dMultipButton.append(ranNum);
     })
     
     dAutoButton.addEventListener('click',()=>{
