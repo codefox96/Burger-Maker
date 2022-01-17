@@ -28,7 +28,7 @@ class DonutMaker{
 
         const sndArray = ["snipers.mp3","fine.mp3","kidding.mp3","love.mp3","wife.mp3","done.mp3","obvi.mp3","fire.mp3","wrong.mp3"];
         
-        if(random % 2 === 0){
+        if(random % 100 === 0){
             testAudio.src = `./sounds/${sndArray[randomSound]}`;
             testAudio.play();
         }
