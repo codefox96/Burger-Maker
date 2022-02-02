@@ -4,61 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Burger Clicker</title>
 </head>
 <body>
     
     <div class="container">
-        
+        <!-- nav bar -->
         <a href="https://orteil.dashnet.org/cookieclicker/"><p class="inspiration" id="cellTop">Inspiration </p></a>
         <p class="rules" id="cellTop">Rules</p>
         <a href="https://www.linkedin.com/in/jordan-gilpin-212017/"><p class="devinfo" id="cellTop">Developer Info</p></a>
         
-        
-            <div id="cellMid5">
-                <section>
-                    <p class="price5">000000</p>
-                    <img src="burger.png" class="mini" alt="" srcset="">
-                </section>
-                <img class="multip" id="mPic5" src="multiplier.png">
-            </div>
-            <img class="donut" src="burger.png" id="cellMid">
-            <div id="cellMid6">
-                <section>
-                    <p class="price6">000000</p>
-                    <img src="burger.png" class="mini">
-                </section>
-                <img class="auto" id="mPic6" src="autoclick.png">
-            </div>
-        
+        <!-- burger multiplier button and price -->
+        <div id="cellMid5">
+            <section>
+                <p class="price5">000000</p>
+                <img src="./images/burger.png" class="mini" alt="Picture of Burger">
+            </section>
+            <img class="multip" id="mPic5" src="./images/multiplier.png" alt="Picture of Louise Belcher">
+        </div>
 
+        <!-- burger button -->
+        <img class="donut" src="./images/burger.png" id="cellMid" alt="Picture of Burger">
+        
+        <!-- burger autoclicker button and price -->
+        <div id="cellMid6">
+            <section>
+                <p class="price6">000000</p>
+                <img src="./images/burger.png" class="mini" alt="Picture of Burger"> 
+            </section>
+            <img class="auto" id="mPic6" src="./images/autoclick.png" alt="Picture of Kuchi Kopi"> 
+        </div>
+        
+        <!-- number of burger multipliers accumulated -->
         <section class="cellBot">
             <h3 class="multip-amount">Multiplier Value:</h3>
             <p class="multip-num">0</p>
         </section>
+
+        <!-- number of burgers accumulated -->
         <section class="cellBot">
             <h3 class="donut-count" id="cellBot">Burger Count:</h3>
             <p class="donut-num">0</p>
         </section>
+
+        <!-- number of burger autoclickers accumulated -->
         <section class="cellBot">
             <h3 class="auto-count" id="cellBot">Auto-Clicker Count:</h3>
             <p class="auto-num">0</p>
-            
-            
         </section>
-        
-     
-            <button class="resetbtn">Reset Game!</button>
-            <button class="musicbtn">ThemeSong</button>
-      
-        
-        
+
+        <!-- reset and themesong button -->
+        <button class="resetbtn">Reset Game!</button>
+        <button class="musicbtn">ThemeSong</button>
     </div>
         
     
     
-    <script type="module" src="./donut-app.js"></script>
+    <script type="module" src="./js/donut-app.js"></script>
 </body>
 </html>

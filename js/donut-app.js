@@ -42,7 +42,7 @@ function wirebuttons() {
         //     rules.innerHTML = `<p>Rules<p>`
         // }
         
-        alert("Click the burger to force Bob to make a burger!\nClick Louise to increase the amount of burgers Bob can make per click!\nClick Kuchi Kopi to increase the amount of burgers automatically generated every second!")
+        alert("1.Click the burger to force Bob to make a burger!\n2.Click Louise to increase the amount of burgers Bob can make per click!\n3.Click Kuchi Kopi to increase the amount of burgers automatically generated every second!")
 
     })
 
