@@ -3,9 +3,7 @@ const dMultip = document.querySelector(".multip-num");
 const dAuto = document.querySelector(".auto-num");
 const dMultipButton = document.querySelector(".multip");
 const dAutoButton = document.querySelector(".auto");
-const testAudio = new Audio();
-// testAudio.src = "./sounds/snipers.mp3";
-testAudio.volume = .2;
+
 
 class DonutMaker{
 
@@ -18,11 +16,31 @@ class DonutMaker{
         this._donutAutoClick = 0;
         this._donutAutoPrice = 100;
         this._activateAuto = false;
+        this._themeToggle = true;
     }
 
     // powerups();
 
+    playTheme(){
+        // if(!this._themeToggle){
+        //     this._themeToggle = true;
+        // }else{
+        //     this._themeToggle = false;
+        // }
+
+        // while(this._themeToggle){
+        //     const themeAudio = new Audio();
+        //     themeAudio.src = "./sounds/theme.mp3";
+        //     themeAudio.volume = .2;
+
+        //     themeAudio.play();
+        // }
+    }
+
     playSound(){
+        const testAudio = new Audio();
+        testAudio.volume = .2;
+
         const random = Math.floor(Math.random() * (1000 - 1) + 1);
         const randomSound = Math.floor(Math.random() * (8-0) + 0);
 
@@ -54,13 +72,9 @@ class DonutMaker{
             dCount.innerHTML = Math.round(this._donutCount);
         }
 
-       
-
         this.powerups();
         this.playSound();
-        
-        
-        
+  
     }
 
     clickMultip(){
@@ -80,7 +94,7 @@ class DonutMaker{
     clickAuto(){
         if(this._donutCount>=this._donutAutoPrice){
             this._donutAutoClick++;
-            dCount.innerHTML = Math.round(this._donutCount-=this._donutAutoPrice);
+            dCount.innerHTML = Math.round(this._donutCount-=this._donutAutoPricing);
             dAuto.innerHTML = Math.round(this._donutAutoClick);
             this._donutAutoPrice*=1.1;
         }else{

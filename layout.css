@@ -94,10 +94,22 @@ body{
 .cellBot{
     /* display: grid; */
     /* justify-content: center; */
-    padding-top: 70px;
+    padding-top: 50px;
+    
     text-align: center;
 }
 
 .cellBot p{
     font-size: xx-large;
+}
+
+.musicbtn{
+    grid-column: 3;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.resetbtn{
+    margin-right: 90px;
+    margin-left: 90px;
 }
