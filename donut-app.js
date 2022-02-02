@@ -8,6 +8,7 @@ const reset = document.querySelector(".resetbtn");
 const music = document.querySelector(".musicbtn");
 const themeAudio = new Audio();
 let themeToggle = false;
+let rulesToggle = false;
 
 let dm = new DonutMaker();
 
@@ -33,8 +34,15 @@ function wirebuttons() {
 
     rules.addEventListener('click',()=>{
         
-        let x = document.createElement("p").innerText = ` \n This is a test!`;
-        rules.append(x);
+        // if(!rulesToggle){
+        //     rulesToggle = true;
+        //     rules.innerHTML = `x<br>x`
+        // }else{
+        //     rulesToggle = false;
+        //     rules.innerHTML = `<p>Rules<p>`
+        // }
+        
+        alert("Click the burger to force Bob to make a burger!\nClick Louise to increase the amount of burgers Bob can make per click!\nClick Kuchi Kopi to increase the amount of burgers automatically generated every second!")
 
     })
 
@@ -47,7 +55,7 @@ function wirebuttons() {
     music.addEventListener('click',()=>{
         
             //try while even continue
-            if(themeToggle === false){
+            if(!themeToggle){
                 themeToggle = true;
             }else{
                 themeToggle = false;
