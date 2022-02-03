@@ -1,13 +1,10 @@
+//query selectors for HTML elements
 const dCount = document.querySelector(".donut-num");
 const dMultip = document.querySelector(".multip-num");
 const dAuto = document.querySelector(".auto-num");
-const dMultipButton = document.querySelector(".multip");
-const dAutoButton = document.querySelector(".auto");
 
-
-class DonutMaker{
-
-    
+//donut maker class
+class BurgerMaker{
 
     constructor(){
         this._donutCount = 0;
@@ -19,23 +16,7 @@ class DonutMaker{
         this._themeToggle = true;
     }
 
-    // powerups();
-
-    playTheme(){
-        // if(!this._themeToggle){
-        //     this._themeToggle = true;
-        // }else{
-        //     this._themeToggle = false;
-        // }
-
-        // while(this._themeToggle){
-        //     const themeAudio = new Audio();
-        //     themeAudio.src = "./sounds/theme.mp3";
-        //     themeAudio.volume = .2;
-
-        //     themeAudio.play();
-        // }
-    }
+    
 
     playSound(){
         const testAudio = new Audio();
@@ -51,22 +32,13 @@ class DonutMaker{
             testAudio.play();
         }
 
-        console.log(random);
-        console.log(randomSound);
     }
 
     clickDonut(){
-        // console.log(this._donutCount);
-
-        if(this._donutCount < this._donutMultipPrice){
-            // dMultipButton.disable
-            // document.getElementsByClassName("multip").style.opacity = "0.9"; 
-        }
 
         if(this._donutMultiplier===0){
             this._donutCount++;
             dCount.innerHTML = Math.round(this._donutCount);
-            // console.log(Math.round(this._donutCount));
         }else{
             this._donutCount += Math.pow(1.2,this._donutMultiplier);
             dCount.innerHTML = Math.round(this._donutCount);
@@ -94,7 +66,7 @@ class DonutMaker{
     clickAuto(){
         if(this._donutCount>=this._donutAutoPrice){
             this._donutAutoClick++;
-            dCount.innerHTML = Math.round(this._donutCount-=this._donutAutoPricing);
+            dCount.innerHTML = Math.round(this._donutCount-=this._donutAutoPrice);
             dAuto.innerHTML = Math.round(this._donutAutoClick);
             this._donutAutoPrice*=1.1;
         }else{
@@ -102,7 +74,7 @@ class DonutMaker{
         }
     
 
-        if(this._activateAuto === false && this._donutAutoClick>0){
+        if(!this._activateAuto && this._donutAutoClick>0){
             this._activateAuto === true;
 
             setInterval((()=>{
@@ -117,24 +89,15 @@ class DonutMaker{
     }
 
     powerups() {
-        if(this._donutCount < this._donutMultipPrice){
-            document.getElementById("mPic5").style.opacity = "0.3";
-        }else{
-            document.getElementById("mPic5").style.opacity = "1";
-        }
-        if(this._donutCount < this._donutAutoPrice){
-            document.getElementById("mPic6").style.opacity = "0.3";
-        }else{
-            document.getElementById("mPic6").style.opacity = "1";
-        }
 
-        let x = document.querySelector(".price5");
-        let y = document.querySelector(".price6");
-        // const pic = new Image();
-        // pic.src = "burger.png";
+        (this._donutCount < this._donutMultipPrice)? document.getElementById("mPic5").style.opacity = "0.3":
+        document.getElementById("mPic5").style.opacity = "1";
 
-        x.innerText = `${Math.round(this._donutMultipPrice)}`;
-        y.innerText = `${Math.round(this._donutAutoPrice)}`;
+        (this._donutCount < this._donutAutoPrice)? document.getElementById("mPic6").style.opacity = "0.3":
+        document.getElementById("mPic6").style.opacity = "1";
+
+        document.querySelector(".price5").innerText = `${Math.round(this._donutMultipPrice)}`;
+        document.querySelector(".price6").innerText = `${Math.round(this._donutAutoPrice)}`;
     }
 
     
@@ -143,22 +106,4 @@ class DonutMaker{
 }
 
 
-export default DonutMaker;
-
-// apptest
-// let dm = new DonutMaker();
-
-// donut.addEventListener('click',()=>{
-//     dm.clickDonut();
-//     console.log("Donut Click");
-// })
-
-// dMultipButton.addEventListener('click',()=>{
-//     dm.clickMultip();
-//     console.log("Multip Click");
-// })
-
-// dAutoButton.addEventListener('click',()=>{
-//     dm.clickAuto();
-//     console.log("Auto Click");
-// })
+export default BurgerMaker;
